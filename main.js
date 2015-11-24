@@ -2,18 +2,18 @@
 		//initiation 
 
 		function startGame() {
-		// checking with a loop and count +1 for every filled box
+
+			// checking with a loop and count +1 for every filled box
 			for (var i = 1; i <= 9; i = i + 1) {
 				clearBox(i);
 			}
-		//taking random reference to X to switch turns.
+
+			//taking X as Always first to start.
 			document.turn = "X";
-			if (Math.random() < 0.5) {
-				document.turn = "O";
-			}
+
 			document.winner = null;
 			setMessage(document.turn + " gets to start.");
-		}
+			}
 		
 		function setMessage(msg) {
 			document.getElementById("message").innerText = msg;

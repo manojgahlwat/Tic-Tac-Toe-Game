@@ -15,14 +15,12 @@
 			setMessage(document.turn + " gets to start.");
 			}
 		
-		function setMessage(msg) {
+			function setMessage(msg) {
 			document.getElementById("message").innerText = msg;
 		}
 
 		
 		//making sure that X and O both switch turns.
-
-
 		function nextMove(square) {
 			if (document.winner != null) {
 				setMessage(document.winner + " already won the game.");
@@ -33,6 +31,7 @@
 				setMessage("That square is already used.");
 			}
 		}
+
 		// Auto switch turns 
 		function switchTurn() {
 		
@@ -48,7 +47,6 @@
 			}
 		}
 		// array assosiated with the squares to check winning combination for either X or O
-
 		function checkForWinner(move) {
 			var result = false;
 			if (checkRow(1, 2, 3, move) || 
@@ -64,8 +62,8 @@
 			}
 			return result;
 		}
+		
 		// winning verification
-
 		function checkRow(a, b, c, move) {
 			var result = false;
 			if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
@@ -81,3 +79,4 @@
 		function clearBox(number) {
 			document.getElementById("s" + number).innerText = "";
 		}
+

@@ -1,6 +1,5 @@
 
 		//initiation 
-
 		function startGame() {
 
 			// checking with a loop and count +1 for every filled box
@@ -46,6 +45,7 @@
 				setMessage("It's " + document.turn + "'s turn!");
 			}
 		}
+		
 		// array assosiated with the squares to check winning combination for either X or O
 		function checkForWinner(move) {
 			var result = false;
